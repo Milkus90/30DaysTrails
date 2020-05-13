@@ -5,6 +5,7 @@ public class Trial {
     String description = null;
     String toDo = null;
     boolean isProgressive = false;
+    double id = 0;
 
     public Trial(String name, String description, String toDo, boolean isProgressive){
         this.name = name;

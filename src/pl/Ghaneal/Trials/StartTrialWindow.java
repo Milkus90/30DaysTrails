@@ -1,17 +1,15 @@
 package pl.Ghaneal.Trials;
 
-
 import javax.swing.*;
-import java.awt.*;
 
-public class NewTrailWindow extends JFrame {
+public class StartTrialWindow extends JFrame {
 
     private JPanel panel, internalPanel;
-    private JLabel text;
+    private JLabel label;
     private JButton button;
 
-    public NewTrailWindow() {
-        super("30 Days Trials - Create New Trial");
+    public StartTrialWindow() {
+        super("30 Days Trials - Start New Trial");
         setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         setBounds(10, 70, 400, 600);
 
