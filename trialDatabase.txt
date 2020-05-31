@@ -1,0 +1,5 @@
+0 ; 0 ; Proba 0 ; Basic ; ex. 'do 5 pushups' ; false ;
+0 ; 0 ; Proba 1 ; Basic ; ex. 'do 5 pushups' ; false ;
+0 ; 0 ; Proba 2 ; Basic ; ex. 'do 5 pushups' ; false ; 
+0 ; 0 ; Proba 3 ; Progressive ; ex. 'do 5 pushups' ; true ; 10.0 ; 5.0 ; 
+0 ; 0 ; Proba 4 ; Basic ; ex. 'do 10 pushups' ; false ; 

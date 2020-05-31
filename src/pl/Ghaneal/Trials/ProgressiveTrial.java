@@ -12,4 +12,9 @@ public class ProgressiveTrial extends Trial {
     }
 
 
+    @Override
+    public String toString() {
+        return id + " ; " + createdByUserId + " ; " + name + " ; " + description + " ; " + toDo + " ; " + isProgressive +
+                " ; " + startingValue + " ; " + dailyProgress + " ; ";
+    }
 }

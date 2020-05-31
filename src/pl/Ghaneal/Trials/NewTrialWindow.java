@@ -5,6 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class NewTrialWindow extends JFrame {
 
@@ -110,10 +112,27 @@ public class NewTrialWindow extends JFrame {
         public void actionPerformed(ActionEvent actionEvent) {
 
             if(isProgressiveCheck.isSelected()){
-               // Trial trial = new Trial()
+                ProgressiveTrial progressiveTrial = new ProgressiveTrial(nameField.getText(),
+                        descriptionField.getText(), toDoField.getText(), true,
+                        Double.parseDouble(startValueField.getText()),
+                                Double.parseDouble(dailyChangeField.getText()));
+                Save s = new Save();
+                try {
+                    s.save(progressiveTrial, "trialDatabase.txt");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }else {
-               // ProgressiveTrial progressiveTrial = new ProgressiveTrial();
+                BasicTrial basicTrial = new BasicTrial(nameField.getText(),
+                        descriptionField.getText(), toDoField.getText(), false);
+                Save s = new Save();
+                try {
+                    s.save(basicTrial, "trialDatabase.txt");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+            NewTrialWindow.this.dispose();
         }
     }
 
@@ -127,6 +146,7 @@ public class NewTrialWindow extends JFrame {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
 
+            NewTrialWindow.this.dispose();
         }
     }
 }
